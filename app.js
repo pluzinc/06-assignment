@@ -3,13 +3,13 @@ require('dotenv').config()
 var cron = require('node-cron')
 var Pushover = require('node-pushover')
 
-//cron.schedule('*/5 * * * * *', notify);
+cron.schedule('*/5 * * * *', notify);
 
-cron.schedule('* 6 * * *', callback);
+cron.schedule('30 8 * * *', callback);
 
-cron.schedule('5 6 * * *', appointment);
+cron.schedule('* 8 * * *', appointment);
 
-cron.schedule('0 */2 * * *', exercise);
+cron.schedule('*/120 * * * *', exercise);
 
 var push = new Pushover({
     token: process.env.APP_TOKEN,
@@ -17,7 +17,7 @@ var push = new Pushover({
 })
 
 function notify() {
-    push.send("is pm2 working?", "My message", handleErrors)
+    push.send("stay Hydrated", "💧 don't forget to drink water", handleErrors)
     log("Running notify now");
 }
 function callback() {
