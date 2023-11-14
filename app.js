@@ -5,9 +5,9 @@ var Pushover = require('node-pushover')
 
 //cron.schedule('*/5 * * * * *', notify);
 
-cron.schedule('* 9 * * *', callback);
+cron.schedule('* 6 * * *', callback);
 
-cron.schedule('5 10 * * *', appointment);
+cron.schedule('5 6 * * *', appointment);
 
 cron.schedule('0 */2 * * *', exercise);
 
