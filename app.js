@@ -3,7 +3,7 @@ require('dotenv').config()
 var cron = require('node-cron')
 var Pushover = require('node-pushover')
 
-cron.schedule('*/5 * * * *', notify);
+cron.schedule('*/5 * * * * *', notify);
 
 cron.schedule('30 8 * * *', callback);
 
