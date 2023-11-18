@@ -5,11 +5,11 @@ var Pushover = require('node-pushover')
 
 cron.schedule('*/30 * * * *', notify);
 
-cron.schedule('0 18 * * *', callback);
+cron.schedule('45 18 * * *', callback);
 
 cron.schedule('* 18 * * *', appointment);
 
-cron.schedule('0 */2 * * *', exercise);
+cron.schedule('45 */2 * * *', exercise);
 
 var push = new Pushover({
     token: process.env.APP_TOKEN,
