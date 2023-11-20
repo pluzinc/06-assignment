@@ -5,7 +5,7 @@ var Pushover = require('node-pushover')
 
 cron.schedule('*/30 * * * *', notify);
 
-cron.schedule('45 18 * * *', callback);
+cron.schedule('35 12 * * *', callback);
 
 cron.schedule('* 18 * * *', appointment);
 
@@ -21,7 +21,7 @@ function notify() {
     log("Running notify now");
 }
 function callback() {
-    push.send("good morning", "get some coffee. do u belive in luck? 🍀", handleErrors)
+    push.send("good afternoon", "get some coffee. do u belive in luck? 🍀", handleErrors)
     log("Running callback now");
 }
 function appointment() {
